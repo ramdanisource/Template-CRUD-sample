@@ -18,12 +18,8 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="bootstrap/css/navbar-fixed-top.css" rel="stylesheet">  
-
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  
+    <link href="bootstrap/css/navbar-fixed-top.css" rel="stylesheet">
+    <link href="bootstrap/css/sticky-footer.css" rel="stylesheet">
 </head>
 <body>
 
@@ -31,75 +27,151 @@
 <!-- Fixed navbar -->
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">CRUD Sample</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">Mahasiswa</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="../navbar/index.html">Default</a></li>
-                <li><a href="../navbar-static-top/index.html">Static top</a></li>
-                <li class="active"><a href="index.html">Fixed top <span class="sr-only">(current)</span></a></li>
-            </ul>
-        </div><!--/.nav-collapse -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">CRUD Example</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>            
+        </ul>
+        <!--<ul class="nav navbar-nav navbar-right">
+            <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Mark Otto</a></p>
+        <li><a href="../navbar/">Default</a></li>
+        <li><a href="../navbar-static-top/">Static top</a></li>
+        <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
+        </ul>-->
+    </div><!--/.nav-collapse -->
     </div>
 </nav>
+<!--ini tutup navbar-->
 
+<!--ini container-->
 <div class="container">
     <div class="row">
 
-    <h3>Data Mahasiswa Teknik Informatika</h3>
-    <hr>
-    <table class="table table-striped">
-        <thead>
-            <td>#</td>
-            <td>NPM</td>
-            <td>Nama</td>
-            <td>Genre</td>
-            <td>Jurusan</td>
-            <td>Semester</td>
-            <td>Kelas</td>
-            <td>Action</td>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>131105150354</td>
-                <td>Rizki Ramdani</td>
-                <td>L</td>
-                <td>Sistem Informasi</td>
-                <td>7</td>
-                <td>Karyawan A</td>
-                <td>
-                    <!-- Split button -->
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-xs btn-success">Action</button>
-                        <button type="button" class="btn btn-xs btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="caret"></span>
-                            <span class="sr-only">Toggle Dropdown</span>
+        <!--ini buka kolom-->
+        <div class="col-lg-10 col-centered">
+            
+            <!--table data mahasiswa-->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title pull-left">
+                        Data Mahasiswa Teknik UIKA
+
+                    </h3>
+                    
+                    <a href="form_add_mhs.html">
+                        <button class="btn btn-primary pull-right btn-sm">
+                            <span class="glyphicon glyphicon-plus"></span> Add Mahasiswa
                         </button>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Edit</a></li>
-                            <li><a href="#">Delete</a></li>
+                    </a>
+                    
+                    <div class="clearfix"></div>
+                </div>
+                      
+                    <table class="table table-striped table-condensed">
+                        <thead>
+                            <th>#</th>
+                            <th>NPM</th>
+                            <th>Nama</th>
+                            <th>Genre</th>
+                            <th>Jurusan</th>
+                            <th>Semester</th>
+                            <th>Kelas</th>
+                            <th>Action</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>131105150354</td>
+                                <td>Rizki Ramdani</td>
+                                <td>Laki-laki</td>
+                                <td>Sistem Informasi</td>
+                                <td>7</td>
+                                <td>Karyawan A</td>
+                                <td>
+                                    <!-- Split button -->
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-xs btn-success">Action</button>
+                                        <button type="button" class="btn btn-xs btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="caret"></span>
+                                            <span class="sr-only">Toggle Dropdown</span>
+                                        </button>
+                                    <ul class="dropdown-menu">
+                                            <li><a href="#">Edit</a></li>
+                                            <li><a href="#">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>1</td>
+                                <td>131105150354</td>
+                                <td>Rizki Ramdani</td>
+                                <td>Laki-laki</td>
+                                <td>Sistem Informasi</td>
+                                <td>7</td>
+                                <td>Karyawan A</td>
+                                <td>
+                                    <!-- Split button -->
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-xs btn-success">Action</button>
+                                        <button type="button" class="btn btn-xs btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="caret"></span>
+                                            <span class="sr-only">Toggle Dropdown</span>
+                                        </button>
+                                    <ul class="dropdown-menu">
+                                            <li><a href="#">Edit</a></li>
+                                            <li><a href="#">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>                            
+                        </tbody>
+                    </table>
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination pull-right">
+                            <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                            </li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                            </li>
                         </ul>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-        
-    </div>
-  
+                    </nav>
+
+                
+            </div>
+            <!--tutup table data mahasiswa-->
+
+        </div>
+        <!--ini tutup kolom -->
+    </div>  
 </div> <!-- /container -->
+
+<!--ini footer-->
+<footer class="footer">
+   <div class="container">
+        <p class="text-muted">Copyright &copy Rizki Ramdani.</p>
+   </div>
+</footer>
+<!--ini tutup footer-->
 
 
 <!-- Bootstrap core JavaScript
